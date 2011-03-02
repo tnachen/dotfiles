@@ -1,14 +1,15 @@
 [user]
-	name = Timothy Chen
-	email = tnachen@gmail.com
+    name = Timothy Chen
+    email = tnachen@gmail.com
     editor = emacs
 
 [merge]
     tool = emerge   
 
 [diff]
-		tool = emerge
+    tool = emerge
 
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     ds = diff --stat
+    st = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
