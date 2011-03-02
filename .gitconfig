@@ -1,0 +1,14 @@
+[user]
+	name = Timothy Chen
+	email = tnachen@gmail.com
+    editor = emacs
+
+[merge]
+    tool = emerge   
+
+[diff]
+		tool = emerge
+
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    ds = diff --stat
