@@ -1,5 +1,7 @@
 (require 'whitespace)
 
+(add-to-list 'load-path "~/.emacs.d/site-lisp/")
+
 (when (cdr command-line-args)
   (setcdr command-line-args (cons "--no-splash" (cdr command-line-args))))
 
@@ -14,6 +16,9 @@
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 ;; Show syntax highlighting when in ruby mode
 (add-hook 'ruby-mode-hook '(lambda () (font-lock-mode 1)))
+
+(require 'flymake-ruby)
+(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
 ;; Set the default tab width to 4
 (setq-default tab-width 4)
