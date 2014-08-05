@@ -8,3 +8,6 @@ PS1='\[\033[0;33m\]\u\[\033[0m\]@\[\033[0;32m\]\h\[\033[0m\]:\[\033[0;34m\]\w\[\
 alias gs="git status -sb"
 alias gllm="git lg | head -n 15"
 alias ll="ls -la"
+alias ga-mod="gs | grep \"^ M\" | cut -d\" \" -f3 | xargs git add"
+alias rmb="find . -name \"*~\" | xargs rm"
+alias rmorig="find . -name \"*.orig\" | xargs rm"
