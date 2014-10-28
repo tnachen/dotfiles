@@ -12,3 +12,4 @@ alias ll="ls -la"
 alias ga-mod="gs | grep \"^ M\" | cut -d\" \" -f3 | xargs git add"
 alias rmb="find . -name \"*~\" | xargs rm"
 alias rmorig="find . -name \"*.orig\" | xargs rm"
+alias mesos-rebuild='rm -rf build; ./bootstrap && mkdir build && cd build && ../configure --disable-java --disable-python && make -j16'
