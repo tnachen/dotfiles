@@ -1,7 +1,7 @@
-B#!/usr/bin/env bash
+#!/usr/bin/env bash
 
 cp -rf .bash_profile ~/
-cp -rf emacs ~/
+cp -rf .emacs.d ~/
 cp -rf .tmux.conf ~/
 cp -rf .gitconfig ~/
 
