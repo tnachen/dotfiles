@@ -17,3 +17,4 @@ alias mesos-rebuild='rm -rf build; ./bootstrap && mkdir build && cd build && ../
 export EDITOR=emacs
 export GOPATH=~/go
 export GOROOT=~/go/
+export TERM=screen
