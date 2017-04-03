@@ -12,11 +12,13 @@ alias ll="ls -la"
 alias ga-mod="gs | grep \"^ M\" | cut -d\" \" -f3 | xargs git add"
 alias rmb="find . -name \"*~\" | xargs rm"
 alias rmorig="find . -name \"*.orig\" | xargs rm"
+alias sync_time="ntpdate ntp.ubuntu.com"
 
 export EDITOR=emacs
 export GOPATH=~/go
 export GOROOT=~/go/
 export TERM=screen
+export PATH=$PATH:~/go/bin
 
 function tmuxa {
     tmux attach -t $1
