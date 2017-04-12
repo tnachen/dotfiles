@@ -12,11 +12,12 @@ alias ll="ls -la"
 alias ga-mod="gs | grep \"^ M\" | cut -d\" \" -f3 | xargs git add"
 alias rmb="find . -name \"*~\" | xargs rm"
 alias rmorig="find . -name \"*.orig\" | xargs rm"
-alias sync_time="ntpdate ntp.ubuntu.com"
+alias sync_time="sudo ntpdate ntp.ubuntu.com"
+alias remove_none_images="sudo docker images | grep none | tr -s \" \" | cut -d\" \" -f3 | xargs -I{} sudo docker rmi -f {}"
 
 export EDITOR=emacs
-export GOPATH=~/go
-export GOROOT=~/go/
+export GOPATH=~/go/
+export GOROOT=~/go
 export TERM=screen
 export PATH=$PATH:~/go/bin
 
