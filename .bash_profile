@@ -19,7 +19,7 @@ export EDITOR=emacs
 export GOPATH=~/go/
 export GOROOT=~/go
 export TERM=screen
-export PATH=$PATH:~/go/bin
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 function tmuxa {
     tmux attach -t $1
