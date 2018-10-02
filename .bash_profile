@@ -17,7 +17,6 @@ alias remove_none_images="sudo docker images | grep none | tr -s \" \" | cut -d\
 
 export EDITOR=emacs
 export GOPATH=~/go/
-export GOROOT=~/go
 export TERM=screen
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
