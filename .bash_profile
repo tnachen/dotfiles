@@ -16,7 +16,7 @@ alias rmorig="find . -name \"*.orig\" | xargs rm"
 alias sync_time="sudo ntpdate ntp.ubuntu.com"
 alias remove_none_images="sudo docker images | grep none | tr -s \" \" | cut -d\" \" -f3 | xargs -I{} sudo docker rmi -f {}"
 function delete_pods {
-  kubectl get pods | grep web | cut -d" " -f1 | paste -sd " " - | xargs -I{} kubectl delete pods {}
+  kubectl get pods | grep web | cut -d" " -f1 | xargs -P8 -I{} kubectl delete pods {}
 }
 
 export EDITOR=emacs
